@@ -1,1 +1,36 @@
-﻿<h1>Hello World!</h1>
+﻿@model IEnumerable<FuckTheNorthIsland.Models.Photo>
+
+<div class="">
+	<div id="main-carousel" class="carousel slide" data-ride="carousel">
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			@for (int i = 0; i < Model.Count(); i++) {
+				var item = Model.ElementAt(i);
+				<div class="item @(i == 0 ? "active" : "")">
+					<img src="@item.Url" alt="@item.Title" class="main-img">
+					<div class="carousel-caption">
+						<h3>@item.Title</h3>
+						<p></p>
+					</div>
+				</div>
+			}
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#main-carousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#main-carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+</div>
+
+<script>
+	$(function() {
+		$('.carousel').carousel({
+			interval: 10000
+		});
+	});
+
+</script>

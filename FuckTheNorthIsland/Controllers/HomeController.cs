@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using FuckTheNorthIsland.PhotoProviders;
 using System.Web.Mvc;
 
 namespace FuckTheNorthIsland.Controllers
@@ -13,7 +14,10 @@ namespace FuckTheNorthIsland.Controllers
 
         public ActionResult Index()
         {
-            return View();
+			var factory = new PhotoProviderFactory();
+			var photos = factory.GetAllPhotos();
+			
+            return View(photos);
         }
 
     }

@@ -112,6 +112,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\Photo.cs" />
+    <Compile Include="PhotoProviders\LocalFolderPhotoProvider.cs" />
+    <Compile Include="PhotoProviders\IPhotoProvider.cs" />
+    <Compile Include="PhotoProviders\PhotoProviderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +129,14 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\ftni.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\samples\Chrysanthemum.jpg" />
+    <Content Include="images\samples\Desert.jpg" />
+    <Content Include="images\samples\Hydrangeas.jpg" />
+    <Content Include="images\samples\Jellyfish.jpg" />
+    <Content Include="images\samples\Koala.jpg" />
+    <Content Include="images\samples\Lighthouse.jpg" />
+    <Content Include="images\samples\Penguins.jpg" />
+    <Content Include="images\samples\Tulips.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="Web.config" />
@@ -135,9 +148,7 @@
     </Content>
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
